@@ -3,7 +3,7 @@ import '../index.css'
 function Help() {
   return (
     <>
-        <div className="artboard artboard-horizontal phone-5 help-container">
+        <div className="help-container px-3 pt-5">
             <h1><strong>Help</strong></h1>
 
             <div className="flex flex-col w-full border-opacity-50">
@@ -11,22 +11,17 @@ function Help() {
             </div>
 
             <h3><strong>Frequently Asked Questions (FAQ)</strong></h3>
-            <p className='pb-3'>Q: Why is the hangman always hanging? Isn't that a bit extreme?
-A: We assure you, no hangmen were harmed in the making of this game. It's just a clever name for a classic word-guessing adventure!</p>
-            <p className='pb-3'>Q: Can I bribe the hangman to give me some hints?
-A: Sorry, but the hangman has a strict no-bribery policy. However, we'll provide you with tips and tricks to outsmart him!</p>
-            <p className='pb-3'>Q: Is it true that using funny words increases my chances of winning?
-A: Well, funny words might make you laugh, but they won't necessarily make you a hangman champion. Focus on guessing the right letters instead!</p>
+            <p className='pb-3'>Q: Why is the hangman always hanging? Isn't that a bit extreme? A: We assure you, no hangmen were harmed in the making of this game. It's just a clever name for a classic word-guessing adventure!</p>
+            <p className='pb-3'>Q: Can I bribe the hangman to give me some hints? A: Sorry, but the hangman has a strict no-bribery policy. However, we'll provide you with tips and tricks to outsmart him!</p>
+            <p className='pb-3'>Q: Is it true that using funny words increases my chances of winning? A: Well, funny words might make you laugh, but they won't necessarily make you a hangman champion. Focus on guessing the right letters instead!</p>
 
             <div className="flex flex-col w-full border-opacity-50">
                 <div className="divider"></div>
             </div>
 
             <h3><strong>Troubleshooting</strong></h3>
-            <p className='pb-3'>Problem: I can't figure out the word, and it's driving me bonkers!
-Solution: Take a break, grab a clown wig, and embrace the silliness. Laughter can sometimes unlock your brain's hidden word-guessing superpowers!</p>
-            <p className='pb-3'>Problem: My hangman drawing skills are downright hilarious (in a bad way).
-Solution: Fear not, artistically challenged friend! Embrace the abstract hangman style and turn it into a masterpiece. Who said stick figures can't be fashionable?</p>
+            <p className='pb-3'>Problem: I can't figure out the word, and it's driving me bonkers! Solution: Take a break, grab a clown wig, and embrace the silliness. Laughter can sometimes unlock your brain's hidden word-guessing superpowers!</p>
+            <p className='pb-3'>Problem: My hangman drawing skills are downright hilarious (in a bad way). Solution: Fear not, artistically challenged friend! Embrace the abstract hangman style and turn it into a masterpiece. Who said stick figures can't be fashionable?</p>
 
             <div className="flex flex-col w-full border-opacity-50">
                 <div className="divider"></div>

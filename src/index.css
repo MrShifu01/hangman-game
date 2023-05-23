@@ -20,25 +20,44 @@ body {
     color: white;
 }
 
-.landing-button {
-
-}
-
 .play-icon {
     font-size: 2rem;
 }
 
-/* SideBar Styling */
+/* Navbar Styling */
 
-.sidebar-menu {
-    border-right: 1px solid gold;
+.navbar {
+    width: 100%;
 }
 
-/* Instructions Styling */
-
-.instructions-container,
-.help-container {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
+.nav-content {
+    width: 90%;
+    max-width: 930px;
+    margin: 0 auto;
 }
+
+/* HELP SECTION */
+
+.help-container,
+.instructions-container {
+    width: 90%;
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+/* HANGMAN */
+
+svg {
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+  
+  line {
+    stroke: black;
+    stroke-width: 4;
+  }
+  
+  .hide {
+    visibility: hidden;
+  }
+  

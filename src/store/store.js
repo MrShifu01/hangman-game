@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import hangmanReducer from './hangman'
+import navigationReducer from "./navigation";
 
 export default configureStore ({
     reducer: {
-        hangman: hangmanReducer
+        navigation: navigationReducer,
     }
 })

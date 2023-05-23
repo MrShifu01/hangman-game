@@ -3,7 +3,7 @@ import '../index.css'
 function Instructions() {
   return (
     <>
-        <div className="artboard artboard-horizontal phone-5 instructions-container">
+        <div className="instructions-container px-3 pt-5">
             <h1><strong>Instructions</strong></h1>
             <div className="flex flex-col w-full border-opacity-50">
                 <div className="divider"></div>
