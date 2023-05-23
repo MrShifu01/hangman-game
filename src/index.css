@@ -27,3 +27,17 @@ body {
 .play-icon {
     font-size: 2rem;
 }
+
+/* SideBar Styling */
+
+.sidebar-menu {
+    border-right: 1px solid gold;
+}
+
+/* Instructions Styling */
+
+.instructions-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

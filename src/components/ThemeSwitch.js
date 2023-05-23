@@ -13,8 +13,8 @@ export default function ThemeSwitcher() {
     return (
       <label className="swap swap-rotate">
         <input onClick={toggleTheme} type="checkbox" />
-        <div className="swap-on">DARKMODE</div>
-        <div className="swap-off">LIGHTMODE</div>
+        <div className="swap-on"><i className='bx bxs-moon'></i></div>
+        <div className="swap-off"><i className='bx bxs-sun' ></i></div>
       </label>
     );
   }
