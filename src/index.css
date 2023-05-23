@@ -60,4 +60,27 @@ svg {
   .hide {
     visibility: hidden;
   }
+
+  /* MainScreen */
+  .mainscreen-container{
+    
+  }
+
+  /* Keys */
+
+  .keys-row-one,
+  .keys-row-two {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+  }
+
+  .keys-row-one-keys,
+  .keys-row-two-keys {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+
   
