@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 export default function ThemeSwitcher() {
     const [theme, setTheme] = useState('luxury');
     const toggleTheme = () => {
-      setTheme(theme === 'luxury' ? 'bumblebee' : 'luxury');
+      setTheme(theme === 'luxury' ? 'lemonade' : 'luxury');
     };
     // initially set the theme and "listen" for changes to apply them to the HTML tag
     useEffect(() => {

@@ -4,7 +4,7 @@ export const wordSlice = createSlice({
     
     name: "word",
     initialState: {
-        word: "Testing"
+        word: null
     },
 
     reducers: {

@@ -1,8 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const maxValue = 7
-const minValue = 0
-
 export const errorSlice = createSlice({
 
     name: "error",
@@ -13,13 +10,7 @@ export const errorSlice = createSlice({
 
     reducers: {
         incrementError: (state) => {
-            if (state.value < maxValue)
             state.value += 1
-        },
-
-        decrementError: (state) => {
-            if (state.value > minValue)
-            state.value -= 1
         },
 
         resetError: (state) => {
