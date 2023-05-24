@@ -49,14 +49,9 @@ const GamePlay = () => {
 
   return (
     <>
-      {word}
-
       {lose && <LoseModal />}
       {win && <WinModal />}
-
       {word && <h1 className="tracking-in-expand-fwd-bottom my-3 gameplay-word">{gameWord}</h1>}
-      {!win && 'false'}
-      {win && 'true'}
     </>
   );
 };
