@@ -155,9 +155,9 @@ svg {
 
 .start-button {
   position: absolute;
+  z-index: 100;
   top: 35%;
   left: 35%;
-
 }
 
 .scale-in-center {
@@ -314,6 +314,23 @@ svg {
 /* GAMEPLAY */
 .gameplay-word {
   font-size: 3rem;
+}
+
+.win-modal-container {
+  position: absolute;
+  z-index: 1000;
+  width: 600px;
+  height: 300px;
+  border-radius: 50px;
+  background-color: green;
+}
+
+.win-modal-container .block {
+  display: block;
+}
+
+.win-modal-container .hidden {
+  display: none;
 }
 
 

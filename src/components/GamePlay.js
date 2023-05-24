@@ -1,35 +1,64 @@
-import { useSelector} from 'react-redux'
-import '../index.css'
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import '../index.css';
+import WinModal from './WinModal';
+import LoseModal from './LoseModal';
+import { toggleWin, toggleLose } from '../store/gamestate';
 
-function GamePlay() {
+const GamePlay = () => {
+  const word = useSelector((state) => state.word.word);
+  const activeKeys = useSelector((state) => state.key.activeKeys);
+  const win = useSelector((state) => state.gamestate.win);
+  const lose = useSelector((state) => state.gamestate.lose);
+  const dispatch = useDispatch();
 
-    const error = useSelector((state) => state.error.value)
-    const word = useSelector((state) => state.word.word)
-    const activeKeys = useSelector((state) => state.key.activeKeys)
-
-    let gameWord = ""
-    if (word != null) {
-      for (let i = 0; i < word.length; i++) {
-        if (activeKeys.includes(word[i])) {
-          gameWord = gameWord + word[i];
-        } else {
-          gameWord = gameWord + "_ ";
+  useEffect(() => {
+    const checkWordComplete = () => {
+      if (word && activeKeys) {
+        const isWordComplete = word.split('').every((letter) => activeKeys.includes(letter));
+        if (isWordComplete) {
+          dispatch(toggleWin());
         }
       }
-    }
+    };
 
-    if (/^[A-Z]+$/.test(gameWord)) {
-      gameWord = "YOU WIN"
+    const checkGameOver = () => {
+      if (word && activeKeys) {
+        const maxErrors = 7; // Set your maximum allowed errors here
+        const numErrors = activeKeys.filter((key) => !word.includes(key)).length;
+        if (numErrors >= maxErrors) {
+          dispatch(toggleLose());
+        }
+      }
+    };
+
+    checkWordComplete();
+    checkGameOver();
+  }, [word, activeKeys, dispatch]);
+
+  let gameWord = '';
+  if (word != null) {
+    for (let i = 0; i < word.length; i++) {
+      if (activeKeys.includes(word[i])) {
+        gameWord = gameWord + word[i];
+      } else {
+        gameWord = gameWord + '_ ';
+      }
     }
-    
+  }
 
   return (
     <>
       {word}
-        {word && <h1 className='tracking-in-expand-fwd-bottom my-3 gameplay-word'>{gameWord}</h1>}
-        {error === 7 && <h1>You Lose</h1>}
-    </>
-  )
-}
 
-export default GamePlay
+      {lose && <LoseModal />}
+      {win && <WinModal />}
+
+      {word && <h1 className="tracking-in-expand-fwd-bottom my-3 gameplay-word">{gameWord}</h1>}
+      {!win && 'false'}
+      {win && 'true'}
+    </>
+  );
+};
+
+export default GamePlay;

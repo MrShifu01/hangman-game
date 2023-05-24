@@ -13,6 +13,7 @@ function Home() {
   return (
     <>
       <Navigation />
+      
           {instructions && !help && <Instructions />}
           {help && !instructions && <Help />}
           {!instructions && !help && <MainScreen />}

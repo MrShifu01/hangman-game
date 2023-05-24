@@ -1,27 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { assignWord } from '../store/word'
-import funnyWords from "../funnyWords"
-
+import { useSelector } from 'react-redux'
 
 const Figure = () => {
-
-  function pickRandomWord (funnyWords) {
-    let index = Math.floor(Math.random() * 19)
-    return funnyWords[index]
-  }
-
-  const handleWord = (e) => {
-    e.preventDefault()
-    const randomWord = pickRandomWord(funnyWords)
-    dispatch(assignWord(randomWord))
-  }
-
   const error = useSelector((state) => state.error.value)
-  const word = useSelector((state) => state.word.word)
-  const dispatch = useDispatch()
 
   return ( // REDO IN MY OWN WORDS
-    <div className='figure-container'>
+    <div>
       <svg className="scale-in-center hangman-figure mt-5 rounded-lg bg-primary-content" height="300" width="400">
         <g id="body">
           {error > 1 && <g id="head">
@@ -51,9 +34,7 @@ const Figure = () => {
           {error > 0 && <line id="rope" x1="200" y1="20" x2="200" y2="60" />}
         </g>
       </svg>
-      {!word && <button className='rotate-center btn btn-lg mt-3 start-button' onClick={handleWord}>Start</button>}
     </div>
-
   )
 }
 

@@ -2,11 +2,17 @@ import '../index.css'
 import Figure from './Figure'
 import GamePlay from './GamePlay'
 import Keys from './Keys'
+import Word from './Word'
 
 function MainScreen() {
+
   return (
     <div className='mainscreen-container flex flex-col items-center justify-center'>
+
+
+        
         <div className='figure-container'>
+          <Word/>
           <Figure/>
         </div>
         <div className='gameplay-container'>
