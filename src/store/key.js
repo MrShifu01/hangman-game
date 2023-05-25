@@ -1,10 +1,14 @@
+// Redux slice for managing the active keys
+
 import { createSlice } from "@reduxjs/toolkit";
 
 export const keySlice = createSlice({
-  name: "key",
+  name: "key", // Slice name
+
   initialState: {
-    activeKeys: [],
+    activeKeys: [], // Initial state for active keys
   },
+
   reducers: {
     toggleKey: (state, action) => {
       const key = action.payload;
@@ -19,8 +23,8 @@ export const keySlice = createSlice({
     },
 
     resetKeys: (state) => {
-        state.activeKeys = []
-    }
+      state.activeKeys = []; // Reset active keys to an empty array
+    },
   },
 });
 

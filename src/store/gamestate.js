@@ -1,33 +1,34 @@
+// Redux slice for managing the game state
+
 import { createSlice } from "@reduxjs/toolkit";
 
 export const gamestateSlice = createSlice({
+  name: "gamestate", // Slice name
 
-    name: "gamestate",
+  initialState: {
+    win: false, // Initial state for win status
+    lose: false, // Initial state for lose status
+  },
 
-    initialState: {
-        win: false,
-        lose: false
+  reducers: {
+    toggleWin: (state) => {
+      state.win = !state.win; // Toggle win status
     },
 
-    reducers: {
-        toggleWin: (state) => {
-            state.win = !state.win
-        },
+    resetWin: (state) => {
+      state.win = false; // Reset win status to false
+    },
 
-        resetWin: (state) => {
-            state.win = false
-        },
+    toggleLose: (state) => {
+      state.lose = !state.lose; // Toggle lose status
+    },
 
-        toggleLose: (state) => {
-            state.lose = !state.lose
-        },
+    resetLose: (state) => {
+      state.lose = false; // Reset lose status to false
+    },
+  },
+});
 
-        resetLose: (state) => {
-            state.lose = false
-        },
-    }
-})
+export const { toggleWin, toggleLose, resetWin, resetLose } = gamestateSlice.actions;
 
-export const { toggleWin, toggleLose, resetWin, resetLose } = gamestateSlice.actions
-
-export default gamestateSlice.reducer
+export default gamestateSlice.reducer;

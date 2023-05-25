@@ -2,7 +2,9 @@ import "../index.css"
 import { useState, useEffect } from 'react'
 
 export default function ThemeSwitcher() {
+  // setting the base theme as luxury
     const [theme, setTheme] = useState('luxury');
+    // switch themes
     const toggleTheme = () => {
       setTheme(theme === 'luxury' ? 'lemonade' : 'luxury');
     };

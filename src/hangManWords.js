@@ -1,3 +1,5 @@
+// Declaring the hangman words
+
 const hangManWords = [
   "APPLE",
   "BANANA",
