@@ -20,7 +20,7 @@ function Word() {
 
   return (
     <>
-        {!word && <button className='rotate-center btn btn-lg mt-3 start-button' onClick={handleWord}>Start</button>}
+        {!word && <button className='heartbeat btn btn-lg mt-3 start-button' onClick={handleWord}>Start</button>}
     </>
   )
 }

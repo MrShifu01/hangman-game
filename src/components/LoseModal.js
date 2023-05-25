@@ -23,7 +23,7 @@ function LoseModal() {
           <h3 className="font-bold text-lg">YOU LOSE!</h3>
           <p className="py-4">The word was {word}</p>
           <div className="modal-action">
-            <label htmlFor="my-modal-6" className="rotate-90-cw btn" onClick={closeModal}>Oh no!</label>
+            <label htmlFor="my-modal-6" className="flip-scale-up-hor btn" onClick={closeModal}>Oh no!</label>
           </div>
         </div>
       </div>

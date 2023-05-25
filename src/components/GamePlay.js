@@ -13,6 +13,7 @@ const GamePlay = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // Check if the word has been completed
     const checkWordComplete = () => {
       if (word && activeKeys) {
         const isWordComplete = word.split('').every((letter) => activeKeys.includes(letter));
@@ -22,6 +23,7 @@ const GamePlay = () => {
       }
     };
 
+    // Check if the game is over (maximum errors reached)
     const checkGameOver = () => {
       if (word && activeKeys) {
         const maxErrors = 7; // Set your maximum allowed errors here
@@ -32,6 +34,7 @@ const GamePlay = () => {
       }
     };
 
+    // Run the checks when the word or activeKeys change
     checkWordComplete();
     checkGameOver();
   }, [word, activeKeys, dispatch]);
@@ -40,18 +43,18 @@ const GamePlay = () => {
   if (word != null) {
     for (let i = 0; i < word.length; i++) {
       if (activeKeys.includes(word[i])) {
-        gameWord = gameWord + word[i];
+        gameWord += word[i]; // Append the guessed letter
       } else {
-        gameWord = gameWord + '_ ';
+        gameWord += '_ '; // Placeholder for unguessed letters
       }
     }
   }
 
   return (
     <>
-      {lose && <LoseModal />}
-      {win && <WinModal />}
-      {word && <h1 className="tracking-in-expand-fwd-bottom my-3 gameplay-word">{gameWord}</h1>}
+      {lose && <LoseModal />} {/* Show the LoseModal component if the player loses */}
+      {win && <WinModal />} {/* Show the WinModal component if the player wins */}
+      {word && <h1 className="tracking-in-expand-fwd-bottom my-3 gameplay-word">{gameWord}</h1>} {/* Display the current game word */}
     </>
   );
 };

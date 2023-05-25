@@ -22,7 +22,7 @@ function WinModal() {
           <h3 className="font-bold text-lg">Congratulations!</h3>
           <p className="py-4">You won the Hangman Challenge</p>
           <div className="modal-action">
-            <label htmlFor="my-modal-6" className="rotate-90-cw btn" onClick={closeModal}>Yay!</label>
+            <label htmlFor="my-modal-6" className="flip-scale-up-hor btn" onClick={closeModal}>Yay!</label>
           </div>
         </div>
       </div>

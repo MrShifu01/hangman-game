@@ -1,3 +1,5 @@
+/* Global Styles */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,22 +12,23 @@ body {
     margin: 0;
 }
 
-/* LANDING PAGE */
+/* Landing Page Styles */
 
+/* Title */
 .landing-title {
     color: white;
 }
 
+/* Paragraph */
 .landing-paragraph {
     color: white;
 }
 
-
 /* Landing Button */
-
 .jello-horizontal {
-	-webkit-animation: jello-horizontal 1s both;
-	        animation: jello-horizontal 1s both;
+    /* Animation styles for jello-horizontal */
+    -webkit-animation: jello-horizontal 1s 1s both;
+            animation: jello-horizontal 1s 1s both;
 }
 
 /* ----------------------------------------------
@@ -41,72 +44,72 @@ body {
  * ----------------------------------------
  */
 @-webkit-keyframes jello-horizontal {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
   }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-            transform: scale3d(1.25, 0.75, 1);
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
   }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-            transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-            transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-            transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-@keyframes jello-horizontal {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-            transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-            transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-            transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-            transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
 
+  /* Play Icon */
 .play-icon {
     font-size: 2rem;
 }
 
 /* Navbar Styling */
-
 .navbar {
     width: 100%;
 }
@@ -118,10 +121,10 @@ body {
 }
 
 .nav-active {
-  color: white;
+    color: white;
 }
 
-/* HELP SECTION */
+/* Help Section Styles */
 
 .help-container,
 .instructions-container {
@@ -130,40 +133,43 @@ body {
     margin: 0 auto;
 }
 
-/* HANGMAN */
+/* Hangman Styles */
 
+/* SVG Styles */
 svg {
     margin: 0 auto;
     border: 1px solid black;
-  }
-  
-  line {
+}
+
+line {
     stroke: black;
     stroke-width: 4;
-  }
-  
-  .hide {
+}
+
+.hide {
     visibility: hidden;
-  }
+}
 
-  /* MainScreen */
-/* Figure */
+/* MainScreen Styles */
 
+/* Figure Container */
 .figure-container {
-  position: relative;
+    position: relative;
 }
 
 .start-button {
-  position: absolute;
-  z-index: 100;
-  top: 35%;
-  left: 35%;
+    position: absolute;
+    z-index: 100;
+    top: 35%;
+    left: 35%;
 }
 
+/* Animation styles for scale-in-center */
 .scale-in-center {
 	-webkit-animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 
 /* ----------------------------------------------
  * Generated by Animista on 2023-5-24 7:43:49
@@ -178,40 +184,38 @@ svg {
  * ----------------------------------------
  */
  @-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
   }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
   }
-}
-@keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
 
-
-/* START BUTTON */
-
-.rotate-center:hover {
-	-webkit-animation: rotate-center 0.6s ease-in-out both;
-	        animation: rotate-center 0.6s ease-in-out both;
+/* Start Button Styles */
+.heartbeat:hover {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 /* ----------------------------------------------
- * Generated by Animista on 2023-5-24 7:41:12
+ * Generated by Animista on 2023-5-25 7:21:53
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
@@ -219,34 +223,80 @@ svg {
 
 /**
  * ----------------------------------------
- * animation rotate-center
+ * animation heartbeat
  * ----------------------------------------
  */
- @-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+ @-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
 
 
-
-/* WORD ENTRANCE */
-
+/* Word Entrance Styles */
 .tracking-in-expand-fwd-bottom {
 	-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -297,34 +347,31 @@ svg {
   }
 }
 
-  /* Keys */
-
-  .keys-row {
+/* Keys Styles */
+.keys-row {
     max-width: 650px;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-  }
-
-  .active-key {
-    opacity: .5;
-  }
-
-
-/* GAMEPLAY */
-.gameplay-word {
-  font-size: 3rem;
 }
 
-/* WIN AND LOSE MODEL */
+.active-key {
+    opacity: .5;
+}
 
-.rotate-90-cw {
-	-webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+/* Gameplay Styles */
+.gameplay-word {
+    font-size: 3rem;
+}
+
+/* Win and Lose Modal Styles */
+.flip-scale-up-hor {
+	-webkit-animation: flip-scale-up-hor 0.5s linear 0.3s alternate-reverse backwards;
+	        animation: flip-scale-up-hor 0.5s linear 0.3s alternate-reverse backwards;
 }
 
 /* ----------------------------------------------
- * Generated by Animista on 2023-5-24 14:28:39
+ * Generated by Animista on 2023-5-25 7:9:36
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
@@ -332,30 +379,34 @@ svg {
 
 /**
  * ----------------------------------------
- * animation rotate-90-cw
+ * animation flip-scale-up-hor
  * ----------------------------------------
  */
- @-webkit-keyframes rotate-90-cw {
+ @-webkit-keyframes flip-scale-up-hor {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5) rotateX(-90deg);
+            transform: scale(1.5) rotateX(-90deg);
   }
   100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
   }
 }
-@keyframes rotate-90-cw {
+@keyframes flip-scale-up-hor {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5) rotateX(-90deg);
+            transform: scale(1.5) rotateX(-90deg);
   }
   100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
   }
 }
-
-
-
-  
